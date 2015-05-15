@@ -1,5 +1,17 @@
 name := "$name;format="lower,hyphen"$"
 
-version := "1.0"
+version := "$version$"
 
-scalaVersion := "2.11.6"
+scalaVersion := "$scalaVersion$"
+
+scalacOptions := Seq(
+  "-unchecked", "-deprecation", 
+  "-encoding", "utf8", 
+  "-Xelide-below", annotation.elidable.ALL.toString
+)
+
+persistLauncher := true
+
+libraryDependencies ++= Seq(
+  "io.github.widok" %%% "widok" % "$widokVersion$"
+)
