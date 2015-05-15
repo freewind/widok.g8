@@ -1,3 +1,5 @@
+enablePlugins(ScalaJSPlugin)
+
 name := "$name;format="lower,hyphen"$"
 
 version := "$version$"
